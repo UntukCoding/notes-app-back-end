@@ -3,7 +3,7 @@ import {routes} from "./routes.js";
 
 const init =async () => {
     const server=hapi.server({
-        port:5000,
+        port:process.env.NODE_ENV !=='production'?'localhost':'0.0.0.0',
         host:'localhost',
         routes:{
             cors:{
