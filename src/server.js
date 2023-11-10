@@ -3,8 +3,8 @@ import {routes} from "./routes.js";
 
 const init =async () => {
     const server=hapi.server({
-        port:process.env.NODE_ENV !=='production'?'localhost':'0.0.0.0',
-        host:'localhost',
+        port:5000,
+        host:process.env.NODE_ENV !=='production'?'localhost':'0.0.0.0',
         routes:{
             cors:{
                 origin: ["*"], // an array of origins or 'ignore'
